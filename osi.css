@@ -1,0 +1,271 @@
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;    
+}
+
+#cooldiv{
+    position: relative;
+}
+
+#play {
+    font-size:60px;
+    background-color:red;
+    position:absolute;
+    top:480px;
+    left:100px;
+    width:200px;
+    height: 70px;
+}
+
+#quit {
+    font-size:60px;
+    background-color:red;
+    position: absolute;
+    top: 480px;
+    left:500px;
+    width:200px;
+    height:70px;
+}
+
+#options {
+    font-size:60px;
+    background-color: red;
+    position:absolute;
+    top:480px;
+    left:800px;
+    width:200px;
+    height:70px;
+}
+
+#credits {
+    font-size:60px;
+    background-color: red;
+    position:absolute;
+    top: 19px;
+    left: 841px;
+    width:200px;
+    height:70px;
+}
+
+#back {
+    font-size:30px;
+    background-color: red;
+    position:absolute;
+    top: 490px;
+    left: 33px;
+    width:200px;
+    height:70px;
+}
+
+#uncooldiv {
+    background-color: black;
+    width:1061px;
+    height: 587px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    border: 3px solid rgb(214, 151, 5);
+    user-select: none;
+}
+
+#encryptg {
+    background-color: rgb(255, 255, 255);
+    width:1061px;
+    height: 587px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    border: 3px solid rgb(214, 151, 5);
+    gap: 50px;
+}
+
+#encryptg > div, textarea {
+    background-color: black;
+    width: 50%;
+    flex-grow: 1;
+    border: 1px solid rgb(214, 151, 5);
+    color:white;
+    font-size: 21px;
+    font-family: cursive;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#stupid {
+    margin:10px;
+}
+
+#ihateranboo {
+    margin:10px;
+}
+
+#alphabet {
+    font-size: 21px !important;
+}
+
+#accept {
+    position: absolute;
+    background-color: seagreen;
+    top: 539px;
+    left: 795px;
+    width: 190px;
+    height: 47px;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+#squishgame {
+    background-color: white;
+    width:1061px;
+    height: 587px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    border: 3px solid rgb(214, 151, 5);
+    justify-content: center;
+}
+
+#squishtext {
+    font-size: 75px;
+    color:red;
+    font-family: cursive;
+    text-align: center;
+}
+
+#sqbutton {
+    font-size:30px;
+    background-color: red;
+    margin:10px;
+    font-weight: bold;
+}
+
+#computerscreen {
+    background-color: black;
+    width: 575px;
+    height: 332px;
+    position: absolute;
+    left: 306px;
+    top: 126px;
+    visibility: hidden;
+    font-family: monospace;
+    color: limegreen;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+}
+
+#okdiv {
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-color: #00000091;
+    z-index: 3;
+}
+
+#okayerdiv {
+    display:flex;
+    background-color: black;
+    width: 20%;
+    height: 40%;
+    border:1px rgb(214, 151, 5) solid;
+    padding:8px;
+    flex-direction: column;
+    gap:5px;
+}
+
+#okayerdiv > button {
+    background-color: black;
+    width:100%;
+    height: 40%;
+    border:1px rgb(214, 151, 5) solid;
+    flex-grow: 1;
+    color: white;
+    font-family:cursive;
+    font-size:20px;
+}
+
+#coolcreds {
+    background-color: black;
+    width:1061px;
+    height: 587px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: cursive;
+    font-size:xx-large;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#textbox {
+    background-color: #000000;
+    padding: 10px;
+    color: white;
+    font-family: cursive;
+    font-size: 21px;
+    border: 1px solid rgb(214, 151, 5);
+    width:70%;
+    height:20%;
+    z-index: 2;
+    position: relative;
+}
+
+#boxop {
+    border:none;
+    background:none;
+    width:15px;
+    height:10px;
+    position:absolute;
+    top: 108px;
+    left: 330px;
+    color: white;
+    font-family: cursive;
+    font-size: 18px;
+}
+
+#namebox {
+    background-color: #000000;
+    color: white;
+    font-family: cursive;
+    font-size:21px;
+    border:1px solid rgb(214, 151, 5);
+    padding: 5px;
+    visibility: hidden;
+    position:absolute;
+    top: -41px;
+    left: -1px;
+}
+
+#bigsoob {
+    display:none;
+    transform: scale(1.5);
+}
+
+#bigtyun {
+    display:none;
+    transform: scale(1.5);
+}
+
+#coolpics {
+    flex:1;
+    min-height: 0;
+    display: flex;
+    top: 43px;
+    position: relative;
+}
