@@ -25,6 +25,7 @@ let squishText = document.getElementById("squishtext")
 let squishSize = 75;
 let squishBtSize = 30;
 let squishButton = document.getElementById("sqbutton")
+let layerBox = document.getElementById("layerbox")
 playButton.onclick = function(){
     coolDiv.style.display = 'none';
     uncoolDiv.style.display = 'flex';
@@ -196,10 +197,42 @@ function clickOrShow () {
         clickOrShow()
         return;
     }
+    if (nextWords == "&1layerAnnounce"){
+        layerBox.style.visibility = "visible"
+        layerBox.innerHTML = "LAYER 1: APPLICATION"
+        clickOrShow()
+        return;
+    }
+    if (nextWords == "&byeLayer"){
+        layerBox.style.visibility = "hidden"
+        clickOrShow()
+        return;
+    }
+    if (nextWords == "&2layerAnnounce"){
+        layerBox.style.visibility = "visible"
+        layerBox.style.width = "768px"
+        layerBox.style.left = "140px"
+        layerBox.innerHTML = "LAYER 2: PRESENTATION"
+        clickOrShow()
+        return;
+    }
+    if (nextWords == "&3layerAnnounce"){
+        layerBox.style.visibility = "visible"
+        layerBox.style.width = "580px"
+        layerBox.style.left = "230px"
+        layerBox.innerHTML = "LAYER 3: SESSION"
+        clickOrShow()
+        return;
+    }
 
     textBox.innerHTML = nextWords;
 }
 var speak = [
+    '&byeText',
+    '&1layerAnnounce',
+    '&pause',
+    '&hiText',
+    '&byeLayer',
     'Soobin\'s phone rings.',
     '&soobin',
     '&soobinName',
@@ -266,8 +299,18 @@ var speak = [
     'Soobin sweats.',
     '&soobinName',
     '"W-what is it?"',
-    '&taehyunNameAlt',
+    '&taehyunName',
     '"Son, I need you to encrypt this message. And then squish it."',
+    '&byeText',
+    '&soobinBye',
+    '&taehyunBye',
+    '&nameBye',
+    '&2layerAnnounce',
+    'pause',
+    '&hiText',
+    '&byeLayer',
+    '&taehyun',
+    '&soobin',
     '&soobinName',
     '"⁉️"',
     '"What...?"',
@@ -287,6 +330,28 @@ var speak = [
     '&bgOffice',
     '&soobin',
     '&taehyun',
-    '"Yay, you did it!"'
+    '"Yay, you did it!"',
+    '"But unfortunately, Soobin, I have to go to a VERY important meeting. You\'re gonna need to go to the neighboring department and find Supervisor Yeonjun. He can assist with the rest of your project for the day."',
+    '&byeText',
+    '&soobinBye',
+    '&taehyunBye',
+    '&nameBye',
+    '&3layerAnnounce',
+    'pause',
+    '&hiText',
+    '&byeLayer',
+    '&taehyun',
+    '&soobin',
+    '&soobinName',
+    '"Oh, alright! Well then, I\'ll see you tomorrow, manager Taehyun!"',
+    '&taehyunName',
+    '"Bye now, son. And remember, keep your eye on the target!"',
+    '&nameBye',
+    'Manager Taehyun winks at Soobin. Soobin is suddenly very uncomfortable.',
+    '&soobinName',
+    '"Um, alright... Bye now..."',
+    '&taehyunBye',
+    '&nameBye',
+    'Soobin walks over to the door that connects the neighboring department to theirs.'
 ];
 clickOrShow();

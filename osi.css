@@ -269,3 +269,18 @@ body {
     top: 43px;
     position: relative;
 }
+
+#layerbox {
+    font-size: 60px;
+    background-color: red;
+    position: absolute;
+    left: 180px;
+    width: 693px;
+    height: 70px;
+    visibility: hidden;
+    color: white;
+    border:1px solid rgb(214, 151, 5);
+    top: 250px;
+    font-family: cursive;
+    padding: 6px;
+}
