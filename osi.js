@@ -65,6 +65,7 @@ okDiv.onclick = function(event){
 uncoolDiv.onclick = function(){
     clickOrShow()
 }
+// this is encrypt minigame
 messageAccept.onclick = function(){
     if (encryptMessage.value == "Ilvtnfb, fvb hyl tf ilzalza mypluk! Aohurz mvy npcpun tl aoha shtivynopup huk 500 tpsspvu dvu!" ||encryptMessage.value == "Gavin is not a bitch"){
         encryptGame.style.display = "none"
@@ -78,6 +79,7 @@ messageAccept.onclick = function(){
         }, 1000)
     }
 }
+// squish minigame
 squishButton.onclick = function(){
     squishBtSize += 3.33;
     squishSize -= 3.75;
@@ -94,6 +96,7 @@ encryptMessage.onkeydown = function(event){
         messageAccept.click();
     }
 }
+// makes all my fancy cool variables and stuff to make people show up or go away or make a background change or anything yes i know its ugly IDGAF ive been coding for like only a year and in that year its been about like maybe 24 hours combined pls be nice and gentle
 function clickOrShow () {
     var nextWords = speak.shift();
     if (nextWords == undefined){
@@ -227,6 +230,7 @@ function clickOrShow () {
 
     textBox.innerHTML = nextWords;
 }
+// this is where they say the things Should i make this into a seperate file lmk guys
 var speak = [
     '&byeText',
     '&1layerAnnounce',
