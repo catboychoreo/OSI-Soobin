@@ -150,6 +150,16 @@ function clickOrShow () {
         clickOrShow();
         return;
     }
+    if (nextWords == "&bgClosedDoor"){
+        uncoolDiv.style.backgroundImage = 'url("closed door.jpg")';
+        clickOrShow()
+        return;
+    }
+    if (nextWords == "&bgOpenDoor"){
+        uncoolDiv.style.backgroundImage = 'url("open door.jpg")';
+        clickOrShow()
+        return;
+    }
     if (nextWords == "&removeBg"){
         uncoolDiv.style.backgroundImage = '';
         clickOrShow();
@@ -356,6 +366,10 @@ var speak = [
     '"Um, alright... Bye now..."',
     '&taehyunBye',
     '&nameBye',
-    'Soobin walks over to the door that connects the neighboring department to theirs.'
+    'Soobin walks over to the door that connects the neighboring department to theirs.',
+    '&bgClosedDoor',
+    '&soobinBye',
+    '&soobinName',
+    '"Hm... I wonder how I can open this door..."'
 ];
 clickOrShow();
