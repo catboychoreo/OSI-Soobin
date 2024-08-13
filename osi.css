@@ -1,66 +1,66 @@
 body {
     align-items: center;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
 
-#cooldiv{
+#cooldiv {
     position: relative;
 }
 
 #play {
-    font-size:60px;
-    background-color:red;
-    position:absolute;
-    top:480px;
-    left:100px;
-    width:200px;
+    font-size: 60px;
+    background-color: red;
+    position: absolute;
+    top: 480px;
+    left: 100px;
+    width: 200px;
     height: 70px;
 }
 
 #quit {
-    font-size:60px;
-    background-color:red;
+    font-size: 60px;
+    background-color: red;
     position: absolute;
     top: 480px;
-    left:500px;
-    width:200px;
-    height:70px;
+    left: 500px;
+    width: 200px;
+    height: 70px;
 }
 
 #options {
-    font-size:60px;
+    font-size: 60px;
     background-color: red;
-    position:absolute;
-    top:480px;
-    left:800px;
-    width:200px;
-    height:70px;
+    position: absolute;
+    top: 480px;
+    left: 800px;
+    width: 200px;
+    height: 70px;
 }
 
 #credits {
-    font-size:60px;
+    font-size: 60px;
     background-color: red;
-    position:absolute;
+    position: absolute;
     top: 19px;
     left: 841px;
-    width:200px;
-    height:70px;
+    width: 200px;
+    height: 70px;
 }
 
 #back {
-    font-size:30px;
+    font-size: 30px;
     background-color: red;
-    position:absolute;
+    position: absolute;
     top: 490px;
     left: 33px;
-    width:200px;
-    height:70px;
+    width: 200px;
+    height: 70px;
 }
 
 #uncooldiv {
     background-color: black;
-    width:1061px;
+    width: 1061px;
     height: 587px;
     display: none;
     flex-direction: column;
@@ -73,7 +73,7 @@ body {
 
 #encryptg {
     background-color: rgb(255, 255, 255);
-    width:1061px;
+    width: 1061px;
     height: 587px;
     display: none;
     flex-direction: column;
@@ -85,12 +85,13 @@ body {
     user-select: none;
 }
 
-#encryptg > div, textarea {
+#encryptg>div,
+textarea {
     background-color: black;
     width: 50%;
     flex-grow: 1;
     border: 1px solid rgb(214, 151, 5);
-    color:white;
+    color: white;
     font-size: 21px;
     font-family: cursive;
     justify-content: center;
@@ -100,11 +101,11 @@ body {
 }
 
 #stupid {
-    margin:10px;
+    margin: 10px;
 }
 
 #ihateranboo {
-    margin:10px;
+    margin: 10px;
 }
 
 #alphabet {
@@ -126,7 +127,7 @@ body {
 
 #squishgame {
     background-color: white;
-    width:1061px;
+    width: 1061px;
     height: 587px;
     display: none;
     flex-direction: column;
@@ -140,17 +141,40 @@ body {
 
 #squishtext {
     font-size: 75px;
-    color:red;
+    color: red;
     font-family: cursive;
     text-align: center;
     user-select: none;
 }
 
 #sqbutton {
-    font-size:30px;
+    font-size: 30px;
     background-color: red;
-    margin:10px;
+    margin: 10px;
     font-weight: bold;
+}
+
+#openthedoor {
+    background-image: url("closed door.jpg");
+    width: 1061px;
+    height: 587px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    border: 3px solid rgb(214, 151, 5);
+    user-select: none;
+}
+
+#dooropener {
+    font-size: 60px;
+    background-color: red;
+    position: absolute;
+    top: 181px;
+    left: 684px;
+    width: 365px;
+    height: 210px;
 }
 
 #computerscreen {
@@ -170,50 +194,50 @@ body {
 }
 
 #okdiv {
-    display:none;
+    display: none;
     align-items: center;
     justify-content: center;
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:100%;
-    height:100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
     background-color: #00000091;
     z-index: 3;
 }
 
 #okayerdiv {
-    display:flex;
+    display: flex;
     background-color: black;
     width: 20%;
     height: 40%;
-    border:1px rgb(214, 151, 5) solid;
-    padding:8px;
+    border: 1px rgb(214, 151, 5) solid;
+    padding: 8px;
     flex-direction: column;
-    gap:5px;
+    gap: 5px;
 }
 
-#okayerdiv > button {
+#okayerdiv>button {
     background-color: black;
-    width:100%;
+    width: 100%;
     height: 40%;
-    border:1px rgb(214, 151, 5) solid;
+    border: 1px rgb(214, 151, 5) solid;
     flex-grow: 1;
     color: white;
-    font-family:cursive;
-    font-size:20px;
+    font-family: cursive;
+    font-size: 20px;
 }
 
 #coolcreds {
     background-color: black;
-    width:1061px;
+    width: 1061px;
     height: 587px;
     display: none;
     align-items: center;
     justify-content: center;
     color: white;
     font-family: cursive;
-    font-size:xx-large;
+    font-size: xx-large;
     text-align: center;
     flex-direction: column;
     position: relative;
@@ -226,8 +250,8 @@ body {
     font-family: cursive;
     font-size: 21px;
     border: 1px solid rgb(214, 151, 5);
-    width:70%;
-    height:20%;
+    width: 70%;
+    height: 20%;
     z-index: 2;
     position: relative;
     display: flex;
@@ -245,16 +269,16 @@ body {
 }
 
 #boxop {
-    border:none;
-    background:none;
+    border: none;
+    background: none;
     color: white;
     font-family: cursive;
     font-size: 18px;
 }
 
 #skip {
-    border:none;
-    background:none;
+    border: none;
+    background: none;
     color: white;
     font-family: cursive;
     font-size: 18px;
@@ -264,27 +288,32 @@ body {
     background-color: #000000;
     color: white;
     font-family: cursive;
-    font-size:21px;
-    border:1px solid rgb(214, 151, 5);
+    font-size: 21px;
+    border: 1px solid rgb(214, 151, 5);
     padding: 5px;
     visibility: hidden;
-    position:absolute;
+    position: absolute;
     top: -41px;
     left: -1px;
 }
 
 #bigsoob {
-    display:none;
+    display: none;
     transform: scale(1.5);
 }
 
 #bigtyun {
-    display:none;
+    display: none;
     transform: scale(1.5);
 }
 
+#bigyeon {
+    display: none;
+    transform:scale(1.5);
+}
+
 #coolpics {
-    flex:1;
+    flex: 1;
     min-height: 0;
     display: flex;
     top: 43px;
@@ -300,7 +329,7 @@ body {
     height: 70px;
     visibility: hidden;
     color: white;
-    border:1px solid rgb(214, 151, 5);
+    border: 1px solid rgb(214, 151, 5);
     top: 250px;
     font-family: cursive;
     padding: 6px;
