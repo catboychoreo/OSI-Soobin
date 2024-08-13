@@ -82,6 +82,7 @@ body {
     background-size: cover;
     border: 3px solid rgb(214, 151, 5);
     gap: 50px;
+    user-select: none;
 }
 
 #encryptg > div, textarea {
@@ -95,6 +96,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    user-select: none;
 }
 
 #stupid {
@@ -107,6 +109,7 @@ body {
 
 #alphabet {
     font-size: 21px !important;
+    user-select: none;
 }
 
 #accept {
@@ -118,6 +121,7 @@ body {
     height: 47px;
     font-family: cursive;
     font-size: 30px;
+    user-select: none;
 }
 
 #squishgame {
@@ -131,6 +135,7 @@ body {
     background-size: cover;
     border: 3px solid rgb(214, 151, 5);
     justify-content: center;
+    user-select: none;
 }
 
 #squishtext {
@@ -138,6 +143,7 @@ body {
     color:red;
     font-family: cursive;
     text-align: center;
+    user-select: none;
 }
 
 #sqbutton {
@@ -224,16 +230,31 @@ body {
     height:20%;
     z-index: 2;
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#penis {
+    flex-grow: 1;
+}
+
+#buttoncontainer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 #boxop {
     border:none;
     background:none;
-    width:15px;
-    height:10px;
-    position:absolute;
-    top: 108px;
-    left: 330px;
+    color: white;
+    font-family: cursive;
+    font-size: 18px;
+}
+
+#skip {
+    border:none;
+    background:none;
     color: white;
     font-family: cursive;
     font-size: 18px;

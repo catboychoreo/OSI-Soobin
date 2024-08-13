@@ -12,6 +12,7 @@ let creditsButton = document.getElementById("credits")
 let credsDiv = document.getElementById("coolcreds")
 let backButton = document.getElementById("back")
 let boxOptions = document.getElementById("boxop")
+let skipButton = document.getElementById("skip")
 let okDiv = document.getElementById("okdiv")
 let goHomeButton = document.getElementById("gohome")
 let changeSettingsButton = document.getElementById("changesettings")
@@ -65,6 +66,25 @@ okDiv.onclick = function(event){
 uncoolDiv.onclick = function(){
     clickOrShow()
 }
+var spaceDown = false;
+window.onkeydown = function(event){
+    if(event.key == " "){
+        spaceDown = true;
+    }
+}
+window.onkeyup = function(event){
+    if(event.key == " "){
+        spaceDown = false;
+    }
+}
+setInterval(function(){
+    if (spaceDown && uncoolDiv.style.display != "none"){
+        clickOrShow();
+    }
+}, 100)
+skipButton.onclick = function(){
+    spaceDown = !spaceDown
+}
 // this is encrypt minigame
 messageAccept.onclick = function(){
     if (encryptMessage.value == "Ilvtnfb, fvb hyl tf ilzalza mypluk! Aohurz mvy npcpun tl aoha shtivynopup huk 500 tpsspvu dvu!" ||encryptMessage.value == "Gavin is not a bitch"){
@@ -95,6 +115,10 @@ encryptMessage.onkeydown = function(event){
         event.preventDefault();
         messageAccept.click();
     }
+}
+function goAwayUncoolDiv (){
+    uncoolDiv.style.display = "none";
+    spaceDown = false;
 }
 // makes all my fancy cool variables and stuff to make people show up or go away or make a background change or anything yes i know its ugly IDGAF ive been coding for like only a year and in that year its been about like maybe 24 hours combined pls be nice and gentle
 function clickOrShow () {
@@ -199,13 +223,13 @@ function clickOrShow () {
         return;
     }
     if (nextWords == '&encryptGame'){
-        uncoolDiv.style.display = "none"
+        goAwayUncoolDiv();
         encryptGame.style.display = "flex"
         clickOrShow();
         return;
     }
     if (nextWords == "&squishGame"){
-        uncoolDiv.style.display = "none"
+        goAwayUncoolDiv();
         squishGame.style.display = "flex"
         clickOrShow()
         return;
@@ -240,136 +264,5 @@ function clickOrShow () {
 
     textBox.innerHTML = nextWords;
 }
-// this is where they say the things Should i make this into a seperate file lmk guys
-var speak = [
-    '&byeText',
-    '&1layerAnnounce',
-    '&pause',
-    '&hiText',
-    '&byeLayer',
-    'Soobin\'s phone rings.',
-    '&soobin',
-    '&soobinName',
-    '"Hello?"',
-    '&soobinBye',
-    '&taehyun',
-    '&taehyunName',
-    '"We have a task for you in the office. Come in NOW!!!!!!!!!!!!!!"',
-    '&taehyunBye',
-    '&soobin',
-    '&soobinName',
-    '"Okay okay okay!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"',
-    '&nameBye',
-    '&bgOffice',
-    'Soobin arrives at the office.',
-    '&taehyun',
-    '&taehyunName',
-    '"Soobin. we have a BIG TASK FOR YOU!!!!"',
-    '"You must deliver a file that an offshore client has requested"',
-    '&taehyunNameAlt',
-    '"Also my alternate name is HTTP"',
-    '"The TT stands for Taehyun Taehyun"',
-    '&soobinName',
-    '"Oh... okay!"',
-    '"I will do my SOOBIN best!"',
-    '&nameBye',
-    '&soobinBye',
-    '&taehyunBye',
-    '&bgComputer',
-    'Soobin looks at his computer in disarray.',
-    'How in the world does he respond to a GET request for a file?',
-    '&soobinName',
-    '&soobin',
-    '"Oh golly gee... this makes no sense! I hate my stupid job!"',
-    '"No... I can\'t give up! I have to keep trying!"',
-    '&soobinBye',
-    '&byeText',
-    '&nameBye',
-    '&computerScreen',
-    '&pause',
-    '&soobin',
-    '&soobinName',
-    '&hiText',
-    '"What\'s this...? GET /give2beomgyu.txt HTTP/1.0?"',
-    '"Where have I heard those last three letters on the give2beomgyu file?"',
-    '"Oh well. I know just what to do! I have to go deliver this file!"',
-    '&computerScreenBye',
-    '&soobinBye',
-    '&byeText',
-    '&nameBye',
-    '&filing',
-    '&pause',
-    '&hiText',
-    'Soobin searches through the filing cabinets for the give2beomgyu.txt file',
-    '&soobinName',
-    '&soobin',
-    '"Ah ha! Here it is!"',
-    '&bgOffice',
-    '&taehyun',
-    '"Manager Taehyun (HTTP)! I have the give2beomgyu.txt file!"',
-    '&taehyunNameAlt',
-    '"Good work, son. Now, I have an even bigger task for you."',
-    '&nameBye',
-    'Soobin sweats.',
-    '&soobinName',
-    '"W-what is it?"',
-    '&taehyunName',
-    '"Son, I need you to encrypt this message. And then squish it."',
-    '&byeText',
-    '&soobinBye',
-    '&taehyunBye',
-    '&nameBye',
-    '&2layerAnnounce',
-    'pause',
-    '&hiText',
-    '&byeLayer',
-    '&taehyun',
-    '&soobin',
-    '&soobinName',
-    '"⁉️"',
-    '"What...?"',
-    '&taehyunName',
-    '"Don\'t worry boy. Here\'s a tutorial."', 
-    '&encryptGame',
-    '"Good work, Soobin! You\'re shaping up to be a top notch employee!"',
-    '&soobinName',
-    '"Wow... thanks boss!"',
-    '&taehyunName',
-    '"No problem, kid. But you still got another task."',
-    '&removeBg',
-    '&taehyunBye',
-    '&soobinBye',
-    '"The squishing."', 
-    '&squishGame',
-    '&bgOffice',
-    '&soobin',
-    '&taehyun',
-    '"Yay, you did it!"',
-    '"But unfortunately, Soobin, I have to go to a VERY important meeting. You\'re gonna need to go to the neighboring department and find Supervisor Yeonjun. He can assist with the rest of your project for the day."',
-    '&byeText',
-    '&soobinBye',
-    '&taehyunBye',
-    '&nameBye',
-    '&3layerAnnounce',
-    'pause',
-    '&hiText',
-    '&byeLayer',
-    '&taehyun',
-    '&soobin',
-    '&soobinName',
-    '"Oh, alright! Well then, I\'ll see you tomorrow, manager Taehyun!"',
-    '&taehyunName',
-    '"Bye now, son. And remember, keep your eye on the target!"',
-    '&nameBye',
-    'Manager Taehyun winks at Soobin. Soobin is suddenly very uncomfortable.',
-    '&soobinName',
-    '"Um, alright... Bye now..."',
-    '&taehyunBye',
-    '&nameBye',
-    'Soobin walks over to the door that connects the neighboring department to theirs.',
-    '&bgClosedDoor',
-    '&soobinBye',
-    '&soobinName',
-    '"Hm... I wonder how I can open this door..."'
-];
+
 clickOrShow();
