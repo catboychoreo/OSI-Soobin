@@ -1,11 +1,26 @@
+html {
+    height: 100%;
+}
+
 body {
     align-items: center;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 #cooldiv {
     position: relative;
+}
+
+#gametitle {
+    font-size: 100px;
+    color: red;
+    position: absolute;
+    left: 60px;
+    top: 25px;
+    white-space: nowrap;
+    -webkit-text-stroke: black 1px;
 }
 
 #play {
@@ -16,6 +31,7 @@ body {
     left: 100px;
     width: 200px;
     height: 70px;
+    border: none;
 }
 
 #quit {
@@ -26,6 +42,7 @@ body {
     left: 500px;
     width: 200px;
     height: 70px;
+    border: none;
 }
 
 #options {
@@ -36,6 +53,7 @@ body {
     left: 800px;
     width: 200px;
     height: 70px;
+    border: none;
 }
 
 #credits {
@@ -46,6 +64,7 @@ body {
     left: 841px;
     width: 200px;
     height: 70px;
+    border: none;
 }
 
 #back {
@@ -56,6 +75,7 @@ body {
     left: 33px;
     width: 200px;
     height: 70px;
+    border: none;
 }
 
 #uncooldiv {
@@ -123,6 +143,7 @@ textarea {
     font-family: cursive;
     font-size: 30px;
     user-select: none;
+    border: none;
 }
 
 #squishgame {
@@ -152,6 +173,7 @@ textarea {
     background-color: red;
     margin: 10px;
     font-weight: bold;
+    border: none;
 }
 
 #openthedoor {
@@ -175,6 +197,7 @@ textarea {
     left: 684px;
     width: 365px;
     height: 210px;
+    border: none;
 }
 
 #computerscreen {
@@ -226,6 +249,7 @@ textarea {
     color: white;
     font-family: cursive;
     font-size: 20px;
+    border: none;
 }
 
 #coolcreds {
