@@ -93,7 +93,7 @@ skipButton.onclick = function () {
 }
 // this is encrypt minigame
 messageAccept.onclick = function () {
-    if (encryptMessage.value == "Ilvtnfb, fvb hyl tf ilzalza mypluk! Aohurz mvy npcpun tl aoha shtivynopup huk 500 tpsspvu dvu!" || encryptMessage.value == "Gavin is not a bitch") {
+    if (encryptMessage.value == "Ilvtnfb, fvb hyl tf ilzalza mypluk! Aohurz mvy npcpun tl aoha shtivynopup huk 500 tpsspvu dvu!" || encryptMessage.value == "Gavin is a bitch") {
         encryptGame.style.display = "none"
         uncoolDiv.style.display = "flex"
     } else {
