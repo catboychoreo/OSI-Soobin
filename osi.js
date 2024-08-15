@@ -210,6 +210,11 @@ function clickOrShow() {
         clickOrShow();
         return;
     }
+    if (nextWords == "&bgYjOffice"){
+        uncoolDiv.style.backgroundImage = 'url("yjoffice.jpeg")';
+        clickOrShow();
+        return;
+    }
     if (nextWords == "&bgClosedDoor") {
         uncoolDiv.style.backgroundImage = 'url("closed door.jpg")';
         clickOrShow()
@@ -297,6 +302,14 @@ function clickOrShow() {
         clickOrShow()
         return;
     }
+    if (nextWords == "&4layerAnnounce") {
+        layerBox.style.visibility = "visible"
+        layerBox.style.width = "600px"
+        layerBox.style.left = "230px"
+        layerBox.innerHTML = "LAYER 4: NETWORK"
+        clickOrShow()
+        return;
+    }
     if (nextWords == "&doorOpenGame"){
         goAwayUncoolDiv();
         doorGame.style.display = "flex"
@@ -305,5 +318,4 @@ function clickOrShow() {
     }
     textBox.innerHTML = nextWords;
 }
-
 clickOrShow();
