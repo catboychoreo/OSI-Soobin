@@ -128,7 +128,7 @@ var speak = [
     '&soobinBye',
     '&soobinName',
     '"Hm... I wonder how I can open this door..."',
-    `"Gee, there's gotta be a button SOMEWHERE..."`
+    `"Gee, there's gotta be a button SOMEWHERE..."`,
     `&doorOpenGame`,
     `&bgOpenDoor`,
     `"Wow! I opened the door! Yay!"`,
