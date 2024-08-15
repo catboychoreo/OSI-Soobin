@@ -1,5 +1,5 @@
 var speak = [
-    /* '&byeText',
+    '&byeText',
     '&1layerAnnounce',
     '&pause',
     '&hiText',
@@ -129,9 +129,9 @@ var speak = [
     '&soobinName',
     '"Hm... I wonder how I can open this door..."',
     `"Gee, there's gotta be a button SOMEWHERE..."`
-    `&doorOpenGame`,
+        `&doorOpenGame`,
     `&bgOpenDoor`,
-    `"Wow! I opened the door! Yay!"`, 
+    `"Wow! I opened the door! Yay!"`,
     `&secretName`,
     `&yeonjun`,
     `"Hello."`,
@@ -141,7 +141,7 @@ var speak = [
     `"Who in the world are you?!"`,
     `&yeonjunName`,
     `"I am the supervisor of the department next door, Yeonjun. I've heard of your task to transport this message to its correct reciever."`,
-    `"I am here to assist you, Soobin. Follow me to my office."`, */
+    `"I am here to assist you, Soobin. Follow me to my office."`,
     `&bgYjOffice`,
     `&nameBye`,
     `&soobinBye`,

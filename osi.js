@@ -124,7 +124,7 @@ squishButton.onclick = function () {
 }
 doorButton.onclick = function () {
     doorGame.style.backgroundImage = 'url("open door.jpg")';
-    if (doorGame.style.backgroundImage == 'url("open door.jpg")'){
+    if (doorGame.style.backgroundImage == 'url("open door.jpg")') {
         doorGame.style.display = "none"
         uncoolDiv.style.display = "flex"
     }
@@ -210,7 +210,7 @@ function clickOrShow() {
         clickOrShow();
         return;
     }
-    if (nextWords == "&bgYjOffice"){
+    if (nextWords == "&bgYjOffice") {
         uncoolDiv.style.backgroundImage = 'url("yjoffice.jpeg")';
         clickOrShow();
         return;
@@ -310,7 +310,7 @@ function clickOrShow() {
         clickOrShow()
         return;
     }
-    if (nextWords == "&doorOpenGame"){
+    if (nextWords == "&doorOpenGame") {
         goAwayUncoolDiv();
         doorGame.style.display = "flex"
         clickOrShow()
