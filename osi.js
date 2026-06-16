@@ -1,8 +1,8 @@
 let playButton = document.getElementById("play");
-let coolDiv = document.getElementById("cooldiv")
-let uncoolDiv = document.getElementById("uncooldiv");
-let fuckYouGavin = document.getElementById("textbox")
-let textBox = document.getElementById("penis");
+let menuDiv = document.getElementById("cooldiv")
+let gameDiv = document.getElementById("uncooldiv");
+let dialogueBox = document.getElementById("textbox")
+let dialogueText = document.getElementById("dialoguetext");
 let bigSoob = document.getElementById("bigsoob")
 let bigTyun = document.getElementById("bigtyun")
 let bigYeon = document.getElementById("bigyeon")
@@ -30,24 +30,25 @@ let squishButton = document.getElementById("sqbutton")
 let layerBox = document.getElementById("layerbox")
 let doorGame = document.getElementById("openthedoor")
 let doorButton = document.getElementById("dooropener");
+
 playButton.onclick = function () {
-    coolDiv.style.display = 'none';
-    uncoolDiv.style.display = 'flex';
+    menuDiv.style.display = 'none';
+    gameDiv.style.display = 'flex';
 }
 quitButton.onclick = function () {
     window.close();
 }
 // menu screen options button
 optionsButton.onclick = function () {
-    alert('Bitch do this later')
+    alert('Options coming soon!')
 }
 creditsButton.onclick = function () {
     credsDiv.style.display = 'flex'
-    coolDiv.style.display = 'none'
+    menuDiv.style.display = 'none'
 }
 backButton.onclick = function () {
     credsDiv.style.display = 'none'
-    coolDiv.style.display = 'flex'
+    menuDiv.style.display = 'flex'
 }
 // text box options button
 boxOptions.onclick = function (event) {
@@ -55,12 +56,12 @@ boxOptions.onclick = function (event) {
     event.stopPropagation();
 }
 goHomeButton.onclick = function () {
-    coolDiv.style.display = 'flex'
-    uncoolDiv.style.display = 'none'
+    menuDiv.style.display = 'flex'
+    gameDiv.style.display = 'none'
     okDiv.style.display = 'none'
 }
 changeSettingsButton.onclick = function () {
-    alert('IDGAF')
+    alert('Settings coming soon!')
 }
 exitOptionsButton.onclick = function () {
     okDiv.style.display = 'none'
@@ -68,7 +69,7 @@ exitOptionsButton.onclick = function () {
 okDiv.onclick = function (event) {
     event.stopPropagation();
 }
-uncoolDiv.onclick = function () {
+gameDiv.onclick = function () {
     clickOrShow()
 }
 // skip feature !
@@ -84,7 +85,7 @@ window.onkeyup = function (event) {
     }
 }
 setInterval(function () {
-    if (spaceDown && uncoolDiv.style.display != "none") {
+    if (spaceDown && gameDiv.style.display != "none") {
         clickOrShow();
     }
 }, 100)
@@ -93,9 +94,9 @@ skipButton.onclick = function () {
 }
 // this is encrypt minigame
 messageAccept.onclick = function () {
-    if (encryptMessage.value == "Ilvtnfb, fvb hyl tf ilzalza mypluk! Aohurz mvy npcpun tl aoha shtivynopup huk 500 tpsspvu dvu!" || encryptMessage.value == "Gavin is a bitch") {
+    if (encryptMessage.value == "Ilvtnfb, fvb hyl tf ilzalza mypluk! Aohurz mvy npcpun tl aoha shtivynopup huk 500 tpsspvu dvu!" || encryptMessage.value == "Claire is super awesome!") {
         encryptGame.style.display = "none"
-        uncoolDiv.style.display = "flex"
+        gameDiv.style.display = "flex"
     } else {
         messageAccept.style.backgroundColor = "red";
         messageAccept.innerHTML = "FOOL"
@@ -119,22 +120,22 @@ squishButton.onclick = function () {
     squishText.style.fontSize = squishSize + 'px';
     if (squishSize < 0) {
         squishGame.style.display = "none"
-        uncoolDiv.style.display = "flex"
+        gameDiv.style.display = "flex"
     }
 }
 doorButton.onclick = function () {
-    doorGame.style.backgroundImage = 'url("open door.jpg")';
-    if (doorGame.style.backgroundImage == 'url("open door.jpg")') {
+    doorGame.style.backgroundImage = 'url("images/open door.jpg")';
+    if (doorGame.style.backgroundImage == 'url("images/open door.jpg")') {
         doorGame.style.display = "none"
-        uncoolDiv.style.display = "flex"
+        gameDiv.style.display = "flex"
     }
 }
-// kills uncooldiv
-function goAwayUncoolDiv() {
-    uncoolDiv.style.display = "none";
+// hides game div
+function hideGameDiv() {
+    gameDiv.style.display = "none";
     spaceDown = false;
 }
-// makes all my fancy cool variables and stuff to make people show up or go away or make a background change or anything yes i know its ugly IDGAF ive been coding for like only a year and in that year its been about like maybe 24 hours combined pls be nice and gentle
+// dialogue engine - handles character sprites, backgrounds, and scene transitions
 function clickOrShow() {
     var nextWords = speak.shift();
     if (nextWords == undefined) {
@@ -206,32 +207,32 @@ function clickOrShow() {
         return;
     }
     if (nextWords == "&bgOffice") {
-        uncoolDiv.style.backgroundImage = 'url("office.jpg")';
+        gameDiv.style.backgroundImage = 'url("images/office.jpg")';
         clickOrShow();
         return;
     }
     if (nextWords == "&bgYjOffice") {
-        uncoolDiv.style.backgroundImage = 'url("yjoffice.jpeg")';
+        gameDiv.style.backgroundImage = 'url("images/yjoffice.jpeg")';
         clickOrShow();
         return;
     }
     if (nextWords == "&bgClosedDoor") {
-        uncoolDiv.style.backgroundImage = 'url("closed door.jpg")';
+        gameDiv.style.backgroundImage = 'url("images/closed door.jpg")';
         clickOrShow()
         return;
     }
     if (nextWords == "&bgOpenDoor") {
-        uncoolDiv.style.backgroundImage = 'url("open door.jpg")';
+        gameDiv.style.backgroundImage = 'url("images/open door.jpg")';
         clickOrShow()
         return;
     }
     if (nextWords == "&removeBg") {
-        uncoolDiv.style.backgroundImage = '';
+        gameDiv.style.backgroundImage = '';
         clickOrShow();
         return;
     }
     if (nextWords == "&bgComputer") {
-        uncoolDiv.style.backgroundImage = 'url("computer.jpg")';
+        gameDiv.style.backgroundImage = 'url("images/computer.jpg")';
         clickOrShow();
         return;
     }
@@ -246,17 +247,17 @@ function clickOrShow() {
         return;
     }
     if (nextWords == '&filing') {
-        uncoolDiv.style.backgroundImage = 'url("filing cabinet.jpg")';
+        gameDiv.style.backgroundImage = 'url("images/filing cabinet.jpg")';
         clickOrShow()
         return;
     }
     if (nextWords == "&byeText") {
-        fuckYouGavin.style.visibility = "hidden"
+        dialogueBox.style.visibility = "hidden"
         clickOrShow();
         return;
     }
     if (nextWords == "&hiText") {
-        fuckYouGavin.style.visibility = "visible"
+        dialogueBox.style.visibility = "visible"
         clickOrShow();
         return;
     }
@@ -264,13 +265,13 @@ function clickOrShow() {
         return;
     }
     if (nextWords == '&encryptGame') {
-        goAwayUncoolDiv();
+        hideGameDiv();
         encryptGame.style.display = "flex"
         clickOrShow();
         return;
     }
     if (nextWords == "&squishGame") {
-        goAwayUncoolDiv();
+        hideGameDiv();
         squishGame.style.display = "flex"
         clickOrShow()
         return;
@@ -311,11 +312,11 @@ function clickOrShow() {
         return;
     }
     if (nextWords == "&doorOpenGame") {
-        goAwayUncoolDiv();
+        hideGameDiv();
         doorGame.style.display = "flex"
         clickOrShow()
         return;
     }
-    textBox.innerHTML = nextWords;
+    dialogueText.innerHTML = nextWords;
 }
 clickOrShow();

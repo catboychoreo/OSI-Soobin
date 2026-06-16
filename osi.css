@@ -179,7 +179,7 @@ textarea {
 }
 
 #openthedoor {
-    background-image: url("closed door.jpg");
+    background-image: url("images/closed door.jpg");
     width: 1061px;
     height: 587px;
     display: none;
@@ -283,7 +283,7 @@ textarea {
     flex-direction: column;
 }
 
-#penis {
+#dialoguetext {
     flex-grow: 1;
 }
 
